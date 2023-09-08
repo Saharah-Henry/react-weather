@@ -75,7 +75,7 @@ export default function App(response) {
             </div>
           </div>
           <a
-            href="https://github.com/Saharah-Henry/project"
+            href="https://github.com/Saharah-Henry/react-weather"
             target="_blank"
             rel="noreferrer"
           >
