@@ -29,26 +29,25 @@ export default function App(response) {
   function updateCity(event) {
     setCity(event.target.value);
   }
+  let form = (
+    <form onSubmit={handleSubmit}>
+      <input type="search " className="search-bar" onChange={updateCity} />
+      <button type="Submit" class="btn btn-primary">
+        {" "}
+        Search
+      </button>
+      <button type="submit" class="btn btn-success">
+        Current
+      </button>
+    </form>
+  );
 
   if (message) {
     return (
       <div className="container">
         <div className="weather-container">
           <Navigation />
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search "
-              className="search-bar"
-              onChange={updateCity}
-            />
-            <button type="Submit" class="btn btn-primary">
-              {" "}
-              Search
-            </button>
-            <button type="submit" class="btn btn-success">
-              Current
-            </button>
-          </form>
+          {form}
           <div className="weather-summary">
             <h1>{city}</h1>
             <div className="day-time">Sunday 11:55</div>
@@ -74,25 +73,23 @@ export default function App(response) {
               <Forecast day="Fri" />
             </div>
           </div>
-          <a
-            href="https://github.com/Saharah-Henry/react-weather"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open-source code
-          </a>
-          , by Saharah Henry
         </div>
+        <a
+          href="https://github.com/Saharah-Henry/react-weather"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-source code
+        </a>
+        , by Saharah Henry
       </div>
     );
   } else {
     return (
       <div className="container">
         <div className="weather-container">
-          <form onSubmit={handleSubmit}>
-            <input type="search" className="search-bar" onChange={updateCity} />
-            <button type="Submit"> Search</button>
-          </form>
+          <Navigation />
+          {form}
         </div>
       </div>
     );
