@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Navigation.css";
 
 export default function Navigation() {
@@ -19,24 +19,16 @@ export default function Navigation() {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="#">
-                Lisbon
-              </a>
+              <a class="nav-link ">Lisbon</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Paris
-              </a>
+              <a class="nav-link">Paris</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Sydney
-              </a>
+              <a class="nav-link">Sydney</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                San Francisco
-              </a>
+              <a class="nav-link">San Francisco</a>
             </li>
           </ul>
         </div>
